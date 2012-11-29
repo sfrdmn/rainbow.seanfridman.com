@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .container {
+  height: 100%;
+}
+
+.container {
+  background-color: black;
+  background-image: url(/img/sunset2.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+iframe {
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+
+#bike {
+  height: 200px;
+  width: auto;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
+}
+
+#bike-c {
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -50px;
+  -webkit-animation: levitate 10s ease-in-out infinite;
+  -moz-animation: levitate 10s ease-in-out infinite;
+}
+
+#dove {
+  position: fixed;
+  top: 15%;
+  height: auto;
+}
+
+#bike-c #dove {
+  opacity: 0;
+  width: 40px;
+  -webkit-transition: opacity 5s;
+  -webkit-animation: dove 30s linear infinite;
+  -webkit-animation-play-state: paused;
+  -moz-transition: opacity 5s;
+  -moz-animation: dove 30s linear infinite;
+  -moz-animation-play-state: paused;
+}
+
+#bike-c:hover {
+  cursor: pointer;
+}
+
+#bike-c:hover #dove {
+  opacity: 1;
+  -webkit-transition: opacity 5s;
+  -webkit-animation-play-state: running;
+  -moz-transition: opacity 5s;
+  -moz-animation-play-state: running;
+}
+
+@-webkit-keyframes dove {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -40px;
+  }
+}
+
+@-webkit-keyframes levitate {
+  0% {
+    margin-top: -0px;
+    height: 200px;
+  }
+  50% {
+    margin-top: -10px;
+    height: 190px;
+  }
+  100% {
+    margin-top: -0px;
+    height: 200px;
+  }
+}
+
+@-moz-keyframes dove {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -40px;
+  }
+}
+
+@-moz-keyframes levitate {
+  0% {
+    margin-top: -0px;
+    height: 200px;
+  }
+  50% {
+    margin-top: -10px;
+    height: 190px;
+  }
+  100% {
+    margin-top: -0px;
+    height: 200px;
+  }
+}
